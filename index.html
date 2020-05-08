@@ -79,8 +79,9 @@ tw-sidebar {
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Can you survive in pandemic?" tags="" position="126.5,20.5" size="100,100">(set: $health to 100)
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Can you survive in pandemic?" tags="" position="125,25" size="100,100">(set: $health to 100)
 (set: $anxiety to 50)
+(set: $society to 10)
 
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
@@ -88,20 +89,21 @@ Your city is experiencing a hard time fighting against a fatal pandemic.
 
 You don’t think it is relevant to you, but things are getting more serious...
 
-The city starts to reduce social gatherings and ask people staying at home.
+The city starts to reduce social gatherings and ask people to stay at home.
 
-So from today, you are going to stay at home and trying to survive from the following days.
+So from today, you are going to stay at home and try to survive from the following days.
 
 [[Tasks]]
-</tw-passagedata><tw-passagedata pid="2" name="Week 1" tags="week-1" position="400.5,76.5" size="100,100">Task: 
+</tw-passagedata><tw-passagedata pid="2" name="Week 1" tags="week-1" position="75,350" size="100,100">Task: 
 Take care of your families
 Grocery shopping
 
--&gt; [[Next-&gt;You]]</tw-passagedata><tw-passagedata pid="3" name="You" tags="" position="348.5,463.5" size="100,100">Usually you are quite busy during the day, and now you are staying at home 24/7.
+[[Next-&gt;You]]</tw-passagedata><tw-passagedata pid="3" name="You" tags="" position="75,475" size="100,100">Usually you are quite busy during the day, and now you are staying at home 24/7.
 
--&gt;[[You kids are surprised ...]] 
-</tw-passagedata><tw-passagedata pid="4" name="You kids are surprised ..." tags="" position="219.5,605.5" size="100,100">(set: $health to $health-0)
+[[You kid Timmy is surprised ...]] 
+</tw-passagedata><tw-passagedata pid="4" name="You kid Timmy is surprised ..." tags="" position="75,625" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 K: Wow! Mom/Dad, you are at home all day! Don’t you go to work?
@@ -113,51 +115,59 @@ K: That’s awesome! Can we play games together?
 [[Yes-&gt;Great! What game?]]
 
 [[No-&gt;Alright...]]
-</tw-passagedata><tw-passagedata pid="5" name="Great! What game?" tags="Yes" position="134.5,752.5" size="100,100">Great! What game?
+</tw-passagedata><tw-passagedata pid="5" name="Great! What game?" tags="Yes" position="75,850" size="100,100">Great! What game?
 
 [[Stay-At-Home interactive games]]
 
 [[Drawings]]
-</tw-passagedata><tw-passagedata pid="6" name="Alright..." tags="" position="358.5,751.5" size="100,100">Alright...
+</tw-passagedata><tw-passagedata pid="6" name="Alright..." tags="" position="250,650" size="100,100">(set: $society to $society +1)
+
+Alright...
 
 Your kid is upset and it takes a while to comfort him.
 
-[[Continue-&gt;Time for grocery]] </tw-passagedata><tw-passagedata pid="7" name="Stay-At-Home interactive games" tags="" position="55.5,900.5" size="100,100">(set: $health to $health-0)
+[[Continue-&gt;Time for grocery]] </tw-passagedata><tw-passagedata pid="7" name="Stay-At-Home interactive games" tags="" position="225,975" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-5)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 After playing, your kid learned how this pandemic appeared and willing to listen to you about healthcare tips.
 
 (color: &quot;red&quot;)+(font:&quot;helvetica&quot;)+(text-style:&quot;blink&quot;)[&quot;I got it! Staying at home is safer than outside.&quot;]
 
-[[Continue-&gt;Time for grocery]] </tw-passagedata><tw-passagedata pid="8" name="Drawings" tags="" position="209.5,902.5" size="100,100">(set: $health to $health-0)
+[[Continue-&gt;Time for grocery]] </tw-passagedata><tw-passagedata pid="8" name="Drawings" tags="" position="250,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 You two have a great time together.
 
 [[Continue-&gt;Time for grocery]] 
 
-</tw-passagedata><tw-passagedata pid="9" name="Time for grocery" tags="" position="588.5,736.5" size="100,100">(set: $health to $health-0)
+</tw-passagedata><tw-passagedata pid="9" name="Time for grocery" tags="" position="425,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 Then you need to go to stores to get essential food and living supplies for the week. 
 
 Before going out, what you should do:
 
-[[Check what is in your fridge, and make a shopping list -&gt; Make a shopping list]]
+[[-Check what is in your fridge, and make a shopping list -&gt; Make a shopping list]]
 
-[[Check which market is open]]
+[[-Check which market is open]]
 
-[[Prepare for going out.]]
-</tw-passagedata><tw-passagedata pid="10" name="Check which market is open" tags="" position="675.5,927.5" size="100,100">(set: $health to $health-0)
+[[-Prepare for going out.]]
+</tw-passagedata><tw-passagedata pid="10" name="-Check which market is open" tags="" position="600,675" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-5)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;left-side&quot;&gt;
 
-The AAA grocery store that you usually went is closed today, but the XX mart is open.
+The AAA grocery store that you usually go to is closed today, but the XX mart is open.
 Glad you checked it, otherwise you would miss the opening hours for XX mart as well.
 
 [[Next-&gt;Time for grocery]] 
@@ -178,8 +188,10 @@ img[data-name=&quot;market&quot;]{
     width=&quot;80%&quot;;
   }
 
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="11" name="Prepare for going out." tags="prepare-for-going-out" position="824.5,927.5" size="100,100">(set: $health to $health-0)
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="11" name="-Prepare for going out." tags="prepare-for-going-out" position="600,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 Prepare to go out.
@@ -293,7 +305,7 @@ function prepareForGoingOut() {
 prepareForGoingOut();
 &lt;/script&gt;
 
-</tw-passagedata><tw-passagedata pid="12" name=" Make a shopping list" tags="" position="555.5,926.5" size="100,100">Shopping list:
+</tw-passagedata><tw-passagedata pid="12" name=" Make a shopping list" tags="" position="600,550" size="100,100">Shopping list:
 
 (color:grey)[- vegetables
 
@@ -309,16 +321,20 @@ prepareForGoingOut();
 
 
 [[Next-&gt;Time for grocery]] 
-</tw-passagedata><tw-passagedata pid="13" name="a recycled shopping bag" tags="" position="825.5,1077.5" size="100,100">(set: $health to $health-10)
+</tw-passagedata><tw-passagedata pid="13" name="a recycled shopping bag" tags="" position="800,925" size="100,100">(set: $health to $health-10)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 Wrong choice!
 
-I know you care about the evironment, but at this time a reusable bag would increase the chance to take the virus back home.
+I know you care about the environment, but at this time a reusable bag would increase the chance to take the virus back home.
 
-[[Go back-&gt;Who you want to take with you to go outside?]] </tw-passagedata><tw-passagedata pid="14" name="Who you want to take with you to go outside?" tags="" position="1079.5,742.5" size="100,100">(set: $health to $health-0)
+[[Go back-&gt;Who you want to take with you to go outside?]] </tw-passagedata><tw-passagedata pid="14" name="Who you want to take with you to go outside?" tags="" position="800,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 &lt;div class=&quot;left-side&quot;&gt;
@@ -348,8 +364,10 @@ img[data-name=&quot;arrow&quot;]{
     width=&quot;80%&quot;;
   }
 
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="15" name="Tommy" tags="" position="1004.5,892.5" size="100,100">(set: $health to $health-0)
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="15" name="Tommy" tags="" position="1000,900" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 You take your boy with you and arrive at the store. However, you see so many people in the grocery store, you don&#39;t know if it is safe for your kid.
@@ -364,8 +382,10 @@ or
 
 
 
-</tw-passagedata><tw-passagedata pid="16" name="Timmy" tags="" position="1154.5,892.5" size="100,100">(set: $health to $health-0)
+</tw-passagedata><tw-passagedata pid="16" name="Timmy" tags="" position="1000,700" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 You take Timmy to the park. There are some people and their dogs as well. Timmy is so excited and wants to play with his friends.
@@ -374,15 +394,16 @@ What should you do?
 
 [[He needs the time to play.]]
 
-[[Stay away from people!]] </tw-passagedata><tw-passagedata pid="17" name="Take him to the store" tags="" position="956.5,1053.5" size="100,100">(set: $health to $health-20)
-(set: $anxiety to $anxiety+10)
+[[Stay away from people!]] </tw-passagedata><tw-passagedata pid="17" name="Take him to the store" tags="" position="1000,1050" size="100,100">(set: $health to $health-10)
+(set: $anxiety to $anxiety+5)
+(set: $society to $society +2)
 
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 3 days after, your kid appears some symptoms like: Coughing, fever.
 He got infected in the grocery store!
  
-[[Continue-&gt;End 3]] </tw-passagedata><tw-passagedata pid="18" name="Leave  him in the car" tags="" position="1079.5,1041.5" size="100,100">(set: $health to $health-0)
+[[Continue-&gt;Kid got sick]] </tw-passagedata><tw-passagedata pid="18" name="Leave  him in the car" tags="" position="1200,925" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety+10)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
@@ -390,23 +411,25 @@ Because you leave the kid alone in the car, someone called the police.
 
 &quot;It&#39;s not allowed to leave your kid alone in the car. Don&#39;t do it next time.&quot; 
 
-[[Continue-&gt;Toilet paper shortage!]] </tw-passagedata><tw-passagedata pid="19" name="He needs the time to play." tags="" position="1226.5,1041.5" size="100,100">(set: $health to $health-20)
+[[Continue-&gt;Toilet paper shortage!]] </tw-passagedata><tw-passagedata pid="19" name="He needs the time to play." tags="" position="1200,675" size="100,100">(set: $health to $health-20)
 (set: $anxiety to $anxiety-5)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 The hours you spend outside would be longer, so the infection risk get 20% higher
 
-[[Continue-&gt;Toilet paper shortage!]] </tw-passagedata><tw-passagedata pid="20" name="Stay away from people!" tags="" position="1452.5,1178.5" size="100,100">(set: $health to $health-0)
+[[Continue-&gt;Toilet paper shortage!]] </tw-passagedata><tw-passagedata pid="20" name="Stay away from people!" tags="" position="1200,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-5)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
-Even though your dog is so cute and they want to play with it. It&#39;s still safer to keep social distance.
+Even though your dog is so cute and they want to play with it. It&#39;s still safer to keep a proper social distance.
 
-[[Continue-&gt;Toilet paper shortage!]] </tw-passagedata><tw-passagedata pid="21" name="Toilet paper shortage!" tags="" position="1640.5,637.5" size="100,100">(set: $health to $health-0)
+[[Continue-&gt;Toilet paper shortage!]] </tw-passagedata><tw-passagedata pid="21" name="Toilet paper shortage!" tags="" position="1400,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety+5)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
-You get into the store and got almost everything on you list. 
+You get into the store and got almost everything on your list. 
 
 However...(color:yellow)[Toilet paper shortage!]
 
@@ -416,7 +439,7 @@ You are going to...
 
 or
 
-[[Fine, I ‘ll check later]]</tw-passagedata><tw-passagedata pid="22" name="Order online immediately" tags="" position="1621.5,887.5" size="100,100">(set: $health to $health-0)
+[[Fine, I ‘ll check later]]</tw-passagedata><tw-passagedata pid="22" name="Order online immediately" tags="" position="1600,925" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-10)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
@@ -427,7 +450,7 @@ Since you ordered online in week one, the delivery would take the new rolls just
 Take a breath.
 
 [[Next stage-&gt;Anxiety management]]
-</tw-passagedata><tw-passagedata pid="23" name="Fine, I ‘ll check later" tags="" position="1761.5,532.5" size="100,100">(set: $health to $health-0)
+</tw-passagedata><tw-passagedata pid="23" name="Fine, I ‘ll check later" tags="" position="1600,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety+10)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
@@ -437,10 +460,12 @@ The toilet paper has been used up!
 
 Because you didn&#39;t order online in week one, then now you can&#39;t find any at stores or online.
 
-Your anxiety level would going up.
+Your anxiety level would go up.
 
-[[Next stage-&gt;Anxiety management]]</tw-passagedata><tw-passagedata pid="24" name="Anxiety management - Overwhelmed Media" tags="" position="2392.8333333333335,494.8333333333333" size="100,100">(set: $health to $health-0)
+[[Next stage-&gt;Anxiety management]]</tw-passagedata><tw-passagedata pid="24" name="Anxiety management - Overwhelmed Media" tags="" position="2200,900" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety+15)
+
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 Anxiety management
@@ -458,52 +483,56 @@ Closing the news windows would help you reduce the exposure of sadness and reduc
 &lt;input type=&quot;checkbox&quot; data-name=&quot;15kids&quot; /&gt; (color:yellow)[15 kids in the same class got infected yesterday]
 
 |==|
+[[Next-&gt;Economic recession]]
 
-(if: $health &gt; 90 and $anxiety &lt; 50)[ [[End 1]] ]
-(elseif: $health &gt; 90 and $anxiety &gt;50) [ [[End 2]] ]
-(elseif: $health &gt; 40 ) [ [[End 3]] ]
 
-</tw-passagedata><tw-passagedata pid="25" name="End 1" tags="" position="2249.5,745" size="100,100">
 
-You survived!
+</tw-passagedata><tw-passagedata pid="25" name="End 1" tags="" position="3000,1375" size="100,100">You survived! Congratulation! 
 
-Life might not seem to be exact the same with thing happened before, but we all should get over it and move on.
+Life might not seem to be exactly the same with thing happened before, but we all should get over it and move on.
 
-Here is your [[result]].
-  
-</tw-passagedata><tw-passagedata pid="26" name="result" tags="" position="2198.5,902" size="100,100">It seems that you could handle the pressure quite well!
-
-Congratulation! 
+It seems that you could handle the pressure quite well.
 
 You can check your [[Report]]  now.
 
 What you&#39;ve learned in the process
 
--.[[Tips]]</tw-passagedata><tw-passagedata pid="27" name="Tips" tags="" position="2179.5,1046" size="100,100">Limit the time of accessing those news, like 10 mins per day.
+[[Tips]]
+
+
+  
+</tw-passagedata><tw-passagedata pid="26" name="Tips" tags="" position="3200,1400" size="100,100">Limit the time of accessing the news, like 10 mins per day.
 
 Let your friends and family know your feelings, and don’t talk about it too much
 
-Switch your attention to other stuffs like cooking, exercising, etc.
-</tw-passagedata><tw-passagedata pid="28" name="End 2" tags="" position="2499.5,802" size="100,100">(If anxiety level&gt; 90, Health level &gt;90, then)
-
+Switch your attention to other stuff like cooking, exercising, etc.
+</tw-passagedata><tw-passagedata pid="27" name="End 2" tags="" position="3000,1500" size="100,100">
 Still good, but...
 
-Seems you are panic about [[Overwhelmed Media-&gt;Anxiety management - Overwhelmed Media]]!
+Seems you are panic about (Color:Red)[Overwhelmed Media]!
 
-Stay calm and here is some [[Tips]] to help:
+Stay calm and here is some [[Tips]] to help.
 
-</tw-passagedata><tw-passagedata pid="29" name="Vaccines" tags="" position="1861.5,1391" size="100,100">Through the hard work of epidemiologists and medical experts all over the world, the vaccine and pills of this fatal disease were launched 12 to 18 months later…
+You can check your [[Report]]  now.
 
-It’s time to finally go back to normal. But the pain and loss we been through would never faded. 
+
+</tw-passagedata><tw-passagedata pid="28" name="Vaccines" tags="" position="2750,1525" size="100,100">Through the hard work of epidemiologists and medical experts all over the world, the vaccine and pills of this fatal disease were launched 12 to 18 months later…
+
+It’s time to finally go back to normal. But the pain and loss we been through would never be faded. 
 
 Saving lives by doing right. 
 
+(if: $health &gt; 80 and $anxiety &lt; 50)[ [[Your result-&gt;End 1]]]
+(elseif: $health &gt; 80 and $anxiety &gt;50) [ [[Your result-&gt;End 2]]]
+(elseif: $health&lt;80) [ [[Your result-&gt;End 3]] ]
 
-[[Your report -&gt;Report]] </tw-passagedata><tw-passagedata pid="30" name="Anxiety management" tags="" position="1934.5,542" size="100,100">(set: $health to $health-0)
+</tw-passagedata><tw-passagedata pid="29" name="Anxiety management" tags="" position="1800,900" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
-It&#39;s been few months, you don&#39;t know when will it ends.
+It&#39;s been a few months, you don&#39;t know when will it ends.
 
 What should you do?
 
@@ -511,20 +540,20 @@ What should you do?
 
 [[Follow the instruction and still protect myself]]
 
-</tw-passagedata><tw-passagedata pid="31" name="Tasks" tags="" position="90.5,167.5" size="100,100">(set: $health to $health-0)
+</tw-passagedata><tw-passagedata pid="30" name="Tasks" tags="" position="100,175" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society +1)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 &lt;div class=&quot;left-side&quot;&gt;
-You are a 32 years old working parent who are required to stay at home from today.
+You are a 32-years old working parent who is required to stay at home from today.
 
-But before that, you need to go to grocery store to prepare for your family. 
+But before that, you need to go to the grocery store to prepare for your family. 
 
 Your partner is working in another city, so you need to take care of your family for the following weeks. 
 
 Here are the tasks you need to do:
-
-
 
 (color: &quot;pink&quot;)[Take care of your families]
 
@@ -542,7 +571,7 @@ OK, don&#39;t worry, let&#39;s take step by step and start from (color: &quot;ye
 
 	&lt;img src=&quot;https://raw.githubusercontent.com/StephMeng/stay-at-home/master/images/1.jpg&quot; alt=&quot;Graph of number of cases&quot; width=&quot;100%&quot;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Take care of your families" tags="" position="59.5,444.5" size="100,100">(set: $health to $health-0)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Take care of your families" tags="" position="275,125" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
@@ -552,9 +581,7 @@ Your parents
 Your partner
 Your friends
 
-[[Tasks]] </tw-passagedata><tw-passagedata pid="33" name="Adjust to new normal" tags="" position="179.5,444.5" size="100,100">(set: $health to $health-5)
-(set: $anxiety to $anxiety-0)
-&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;</tw-passagedata><tw-passagedata pid="34" name="Report" tags="" position="2507.8333333333335,1098" size="100,100">&lt;div class=&quot;left-side&quot;&gt;
+[[Tasks]] </tw-passagedata><tw-passagedata pid="32" name="Report" tags="" position="3200,1600" size="100,100">&lt;div class=&quot;left-side&quot;&gt;
 
 &quot;Report&quot;
 
@@ -565,9 +592,9 @@ Anxiety Level:	$anxiety
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; min=&quot;0&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; min=&quot;0&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 The world
-Affection rate: 30%
+Affection rate: $society%
 
-Reduced by 8% from your actions
+Reduced by 4% from your actions
 
 
 [[Tips]]
@@ -592,33 +619,167 @@ Reduced by 8% from your actions
   
   &lt;/style&gt;
   
-</tw-passagedata><tw-passagedata pid="35" name="End 3" tags="" position="1096.5,1305.5" size="100,100">(set: $health to $health+10)
+</tw-passagedata><tw-passagedata pid="33" name="Kid got sick" tags="" position="1700,1075" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-10)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
-So sad, your kid get infected. You take him to see a doctor immediately, and after being taken good care of the medical team, Timmy is fully recovered.
+So sad, your kid gets infected. You take him to see a doctor immediately, and after being taken good care of the medical team, Timmy is fully recovered.
 
-[[Continue-&gt;Vaccines]] </tw-passagedata><tw-passagedata pid="36" name="It&#39;s time to go out and have parties!" tags="" position="1799.5,1050.5" size="100,100">(set: $health to $health-30)
+[[Continue-&gt;Anxiety management]] </tw-passagedata><tw-passagedata pid="34" name="It&#39;s time to go out and have parties!" tags="" position="2000,950" size="100,100">(set: $health to $health-20)
 (set: $anxiety to $anxiety-5)
+(set: $society to $society +2)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 &quot;It&#39;s time to go out and have parties!&quot;
 
-Really? Although the number of new cases reduced these days, it is still risky to recklessly free yourself. Hold on your passion until the we found vaccines or medicines to cure the disease. 
+Really? Although the number of new cases reduced these days, it is still risky to recklessly free yourself. Hold on your passion until we found vaccines or medicines to cure the disease. 
 
-(show inflatuations of the curve or the 2nd outbreak)
+(show infatuations of the curve or the 2nd outbreak)
 
-[[Next-&gt;Anxiety management - Overwhelmed Media]] </tw-passagedata><tw-passagedata pid="37" name="Follow the instruction and still protect myself" tags="" position="1954.5,1033" size="100,100">(set: $health to $health-0)
+
+[[Next-&gt;Anxiety management - Overwhelmed Media]] </tw-passagedata><tw-passagedata pid="35" name="Follow the instruction and still protect myself" tags="" position="2000,800" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety-0)
+(set: $society to $society -3)
+
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 
 &quot;Follow the instruction and still protect myself&quot;
 
-That&#39;s responsible! Not only for yourself, but also your families and outside the world.
+That&#39;s responsible! Not only for yourself but also for your families and outside the world.
 
 The curve would smoothly decrease. 
 
-[[Next-&gt;Anxiety management - Overwhelmed Media]] </tw-passagedata><tw-passagedata pid="38" name="&lt;input type=&quot;checkbox&quot; data-name=&quot;bag&quot; /&gt; a recycled shopping bag" tags="" position="943.5,1174.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="a recycled shopping bag-&gt;" tags="" position="1063.5,1173.5" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[Next-&gt;Anxiety management - Overwhelmed Media]] </tw-passagedata><tw-passagedata pid="36" name="Economic recession" tags="" position="2200,1025" size="100,100">(set: $health to $health-0)
+(set: $anxiety to $anxiety-10)
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+The rates of infection increased rapidly, the government requires everyone to limit their time of going out and properly cover your face. 
+
+Luckily you have some PPEs(personal protective equipment) left because of your parents were doctors and they are always preparing some at home. You also bought some in the first week. There are enough protections for your family.
+
+[[Next-&gt; your partner]]
+</tw-passagedata><tw-passagedata pid="37" name="End 3" tags="" position="3000,1625" size="100,100">What you’ve done makes you stay at high risk to get infected. 
+
+But it’s okay, that’s why we are trying to help.
+
+Let’s learn what we’ve done wrong so we could make a better decision in real life.
+
+You can check your [[Report]]  now.
+
+What you&#39;ve learned in the process
+
+[[Tips]]
+</tw-passagedata><tw-passagedata pid="38" name=" your partner" tags="" position="2200,1150" size="100,100">(set: $health to $health-5)
+(set: $anxiety to $anxiety+5)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+The outbreak of pandemic has a huge impact on the local economy. The lock-down policy shuts down many small businesses. 
+
+Your partner calls you that his/her office is closed and his salary would be cut down in half from now.
+
+He/She is coming back now tomorrow.
+
+[[Next-&gt;Pick up]]</tw-passagedata><tw-passagedata pid="39" name="Pick up" tags="" position="2200,1275" size="100,100">(set: $health to $health-0)
+(set: $anxiety to $anxiety-5)
+(set: $society to $society +1)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+You wear the mask and gloves to the airport to pick up your partner. 
+
+He/she looks fine but a little bit tired. You give the hand sanitizer to him/her and minimize physical contact even though you miss each other so much.
+
+[[Next-&gt;Neighbor]]</tw-passagedata><tw-passagedata pid="40" name="Neighbor" tags="" position="2200,1400" size="100,100">(set: $health to $health+5)
+(set: $anxiety to $anxiety-5)
+(set: $society to $society -1)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+On the way back, your neighbor Ms.T saw you all wearing masks. She stands in her courtyard and asks where did you get that. 
+
+You answered.
+
+She asks whether she can get some from you, and she will pay you in a good amount of money.
+
+You would...
+
+[[Take the offer to cover the tight budget of your family-&gt;Sell]]
+
+[[Embarrassed to sell but willing to share few masks with your neighbor -&gt; Share]]
+</tw-passagedata><tw-passagedata pid="41" name="Sell" tags="" position="2350,1450" size="100,100">(set: $health to $health-5)
+(set: $anxiety to $anxiety-5)
+
+(set: $society to $society -1)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+Great!
+
+You leave 15% of masks to Ms.T and get $$$$ money back, which could cover the gap of your partner’s pay cut. 
+
+Ms.T appreciated a lot. She is really nice lady who lives alone in her 70s. She doesn’t have any children or families in the same city.
+
+[[Next-&gt;Your parents]]
+</tw-passagedata><tw-passagedata pid="42" name=" Share" tags="" position="2350,1325" size="100,100">(set: $health to $health-5)
+(set: $anxiety to $anxiety-0)
+(set: $society to $society -2)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+You gave 5 masks to Ms.T. Hope that would be helpful for her.
+
+Ms.T appreciated a lot. She is really nice lady who lives alone in her 70s. She doesn’t have any children or families in the same city.
+
+[[Next-&gt;Your parents]]
+</tw-passagedata><tw-passagedata pid="43" name="Your parents" tags="" position="2500,1375" size="100,100">(set: $health to $health-0)
+(set: $anxiety to $anxiety+5)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+Ms.T reminds you of your parents. Haven’t contacted them for a while, you make a video call but they didn’t pick up.
+
+They live in a town which is 10 hours drive from you. You haven’t heard any news from there but the pandemic outbreak is everywhere, so you start to worry about them.
+
+You leave a message and ask them to call you again.
+
+[[Next-&gt;Your parents 2]]
+</tw-passagedata><tw-passagedata pid="44" name="Your parents 2" tags="" position="2500,1525" size="100,100">(set: $health to $health-0)
+(set: $anxiety to $anxiety+5)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+Both of your parents used to work for medical care industry. Your dad had to step down because of bad health condition. Your mom was a licsenced nurse and retired 5 years ago.
+
+They want to sign up for volunteers and go back to the front line to help release the burden of medical care.
+
+You say…
+
+[[It’s good to help, but you two are in high risks.-&gt;Parents 3]]
+
+Or
+[[I am really concerned about your health.-&gt;Parents 3]]
+
+Or
+[[Stay at home is the best way to help-&gt;Parents 3]]
+</tw-passagedata><tw-passagedata pid="45" name="Parents 3" tags="" position="2500,1675" size="100,100">(set: $health to $health-0)
+(set: $anxiety to $anxiety-0)
+(set: $society to $society -5)
+
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
+
+No matter what you say, they decided to step out to help society.
+
+However, at least you make your dad stay at home and work as a healthcare consultant remotely. He is definitely part of the susceptible populations.
+
+Your mom puts on her uniforms and goes back to the front line. You feel both proud of her but also concerned.
+
+You order fresh food groceries for them to reduce the possibility to go out.
+
+[[Next-&gt;Vaccines]]
+
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
