@@ -66,6 +66,9 @@ tw-story[tags="week-1"] {
 	width: 80px;
     display: inline-block;
 }
+.progress-change {
+  color: orange;
+}
 
 /* Give more space to use */
 tw-story {
@@ -77,6 +80,12 @@ tw-sidebar {
     display: none;
 }
 
+/* Buttons */
+button[data-raw] {
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Can you survive in pandemic?" tags="" position="125,25" size="100,100">(set: $health to 100)
@@ -190,17 +199,24 @@ img[data-name=&quot;market&quot;]{
 (set: $society to $society +1)
 &lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
 Prepare to go out.
+
 &lt;div class=&quot;left-side&quot;&gt;
 Pick the items below if you think it&#39;s necessary.
 
-&lt;input type=&quot;checkbox&quot; data-name=&quot;bottle&quot; /&gt; a water bottle
-&lt;input type=&quot;checkbox&quot; data-name=&quot;mask&quot; /&gt; a mask
-&lt;input type=&quot;checkbox&quot; data-name=&quot;perfume&quot; /&gt; perfumes
-&lt;input type=&quot;checkbox&quot; data-name=&quot;gloves&quot; /&gt; gloves
-&lt;input type=&quot;checkbox&quot; data-name=&quot;keys&quot; /&gt; keys
-&lt;input type=&quot;checkbox&quot; data-name=&quot;apple&quot; /&gt; an apple
-&lt;input type=&quot;checkbox&quot; data-name=&quot;bag&quot; /&gt; (link-reveal-goto:&quot;a recycled shopping bag&quot;,&quot;a recycled shopping bag&quot;)[(alert:&quot;Wrong choice!&quot;)]
-&lt;input type=&quot;checkbox&quot; data-name=&quot;sanitizer&quot; /&gt; a bottle of hand sanitizer
+&lt;input type=&quot;checkbox&quot; id=&quot;bottle&quot; data-name=&quot;bottle&quot; /&gt; &lt;label for=&quot;bottle&quot;&gt;a water bottle&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;mask&quot; data-name=&quot;mask&quot; /&gt; &lt;label for=&quot;mask&quot;&gt;a mask&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;perfume&quot; data-name=&quot;perfume&quot; /&gt; &lt;label for=&quot;perfume&quot;&gt;perfumes&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;gloves&quot; data-name=&quot;gloves&quot; /&gt; &lt;label for=&quot;gloves&quot;&gt;gloves&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;keys&quot; data-name=&quot;keys&quot; /&gt; &lt;label for=&quot;keys&quot;&gt;keys&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;apple&quot; data-name=&quot;apple&quot; /&gt; &lt;label for=&quot;apple&quot;&gt;an apple&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;bag&quot; data-name=&quot;bag&quot; /&gt; (link: &quot;a recycled shopping bag&quot;)[
+    (alert: &quot;Wrong choice!&quot;)
+    (go-to: &quot;a recycled shopping bag&quot;)
+]
+&lt;input type=&quot;checkbox&quot; id=&quot;sanitizer&quot; data-name=&quot;sanitizer&quot; /&gt; &lt;label for=&quot;sanitizer&quot;&gt;a bottle of hand sanitizer&lt;/label&gt;
+
+
+
 
 [[Next-&gt;Who you want to take with you to go outside?]] 
 
@@ -456,12 +472,9 @@ Because you didn&#39;t order online in week one, then now you can&#39;t find any
 
 Your anxiety level would go up.
 
-[[Next stage-&gt;Anxiety management]]</tw-passagedata><tw-passagedata pid="24" name="Anxiety management - Overwhelmed Media" tags="" position="2200,900" size="100,100">(set: $health to $health-0)
+[[Next stage-&gt;Anxiety management]]</tw-passagedata><tw-passagedata pid="24" name="Anxiety management - Overwhelmed Media" tags="anxiety-management-overwhelmed-media" position="2200,900" size="100,100">(set: $health to $health-0)
 (set: $anxiety to $anxiety+15)
-
-
-&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;/p&gt;&lt;/small&gt;
-
+&lt;small class=&quot;progress-stats&quot;&gt;&lt;p&gt;&lt;span&gt;Health: $health &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $health) + &#39;&quot;&gt;&lt;/progress&gt;&#39;)&lt;span class=&quot;progress-change&quot;&gt;+0&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Anxiety: $anxiety &lt;/span&gt;(print: &#39;&lt;progress max=&quot;100&quot; value=&quot;&#39; + (text: $anxiety) + &#39;&quot;&gt;&lt;/progress&gt;&#39;) &lt;span class=&quot;progress-change&quot;&gt;+15&lt;/span&gt;&lt;/p&gt; &lt;/small&gt;
 Anxiety management
 
 Your anxiety level goes up when reading too much life and death stories around pandemic.
@@ -469,18 +482,66 @@ Your anxiety level goes up when reading too much life and death stories around p
 Closing the news windows would help you reduce the exposure of sadness and reduce your anxiety level
 
 ||==
-&lt;input type=&quot;checkbox&quot; data-name=&quot;breakingnews&quot; /&gt; (color:yellow) [Breaking news! The death cases went up 40+ in XX city!]
+&lt;input type=&quot;checkbox&quot; id=&quot;breakingnews&quot; data-name=&quot;breakingnews&quot; /&gt; &lt;label for=&quot;breakingnews&quot;&gt;Breaking news! The death cases went up 40+ in XX city!&lt;/label&gt;
 
 ==||==
-&lt;input type=&quot;checkbox&quot; data-name=&quot;73oldmen&quot; /&gt; (color:yellow)[The 73-year-old men refused to use life-support equipment after his partner died.]
+&lt;input type=&quot;checkbox&quot; id=&quot;oldmen73&quot; data-name=&quot;oldmen73&quot; /&gt; &lt;label for=&quot;oldmen73&quot;&gt;The 73-year-old men refused to use life-support equipment after his partner died.&lt;/label&gt;
 ==||
-&lt;input type=&quot;checkbox&quot; data-name=&quot;15kids&quot; /&gt; (color:yellow)[15 kids in the same class got infected yesterday]
+&lt;input type=&quot;checkbox&quot; id=&quot;kids15&quot; data-name=&quot;kids15&quot; /&gt; &lt;label for=&quot;kids15&quot;&gt;15 kids in the same class got infected yesterday&lt;/label&gt;
 
 |==|
-[[Next-&gt;Economic recession]]
+&lt;span id=&quot;next-task&quot;&gt;[[Next-&gt;Economic recession]]&lt;/span&gt;
 
 
+&lt;style&gt;
+tw-story[tags=&quot;anxiety-management-overwhelmed-media&quot;] label {
+    color: yellow;
+}
 
+tw-story[tags=&quot;anxiety-management-overwhelmed-media&quot;] #next-task {
+    visibility: hidden;
+}
+&lt;/style&gt;
+
+
+&lt;script&gt;
+function anxietyManagementOverwhelmedMedia() {
+  let section = document.querySelector(&#39;tw-story[tags=&quot;anxiety-management-overwhelmed-media&quot;]&#39;);
+
+  if (!section) {
+    return;
+  }
+
+  let inputs = section.querySelectorAll(&quot;input[data-name]&quot;);
+
+  function onItemClick(event) {
+    const item = event.target;
+    const isChecked = item.checked;
+    const label = section.querySelector(&quot;label[for=&#39;&quot; + item.id +&quot;&#39;&quot;)
+    
+    if(isChecked) {
+        label.dataset.text = label.innerText;
+        label.innerHTML = &quot;&lt;s&gt;&quot; + label.innerText + &quot;&lt;/s&gt;&quot;;
+    } else {
+        label.innerHTML = label.dataset.text
+        label.dataset.text = &quot;&quot;;
+    }
+
+    if (section.querySelectorAll(&quot;input[data-name]:checked&quot;).length === 3) {
+        section.querySelector(&quot;#next-task&quot;).style.visibility = &quot;visible&quot;;
+    } else {
+        section.querySelector(&quot;#next-task&quot;).style.visibility = &quot;hidden&quot;;
+    }
+  }
+
+  for (let index = 0; index &lt; inputs.length; index++) {
+    let item = inputs[index];
+    item.addEventListener(&quot;change&quot;, onItemClick);
+  }
+}
+
+anxietyManagementOverwhelmedMedia();
+&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="25" name="End 1" tags="" position="3000,1375" size="100,100">You survived! Congratulation! 
 
 Life might not seem to be exactly the same with thing happened before, but we all should get over it and move on.
@@ -592,7 +653,9 @@ What you&#39;ve learned in the process
 
 [[Tips]]
 
-(reload:)[Play it again]
+
+
+&lt;button&gt;(link: &quot;Play it again2&quot;)[(reload:)]&lt;/button&gt;
 
 &lt;/div&gt;
 
@@ -647,7 +710,7 @@ The curve would smoothly decrease.
 
 The rates of infection increased rapidly, the government requires everyone to limit their time of going out and properly cover your face. 
 
-Luckily you have some PPEs(personal protective equipment) left because of your parents were doctors and they are always preparing some at home. You also bought some in the first week. There are enough protections for your family.
+Luckily you have some PPEs (personal protective equipment) left because of your parents were doctors and they are always preparing some at home. You also bought some in the first week. There are enough protections for your family.
 
 [[Next-&gt; your partner]]
 </tw-passagedata><tw-passagedata pid="37" name="End 3" tags="" position="3000,1625" size="100,100">What you’ve done makes you stay at high risk to get infected. 
